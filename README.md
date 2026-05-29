@@ -2,7 +2,7 @@
 
 Local-first fine-tuning project for the LaViTA medical QA dataset on an 8 GB M2 MacBook Air using `mlx-lm`.
 
-## Staff-Engineer Read
+## Recommended Starting Point
 
 Use `mlx-community/Qwen2.5-0.5B-Instruct-4bit` first. It is small enough to fine-tune with LoRA on 8 GB unified memory and still has a modern chat template. `mlx-community/Qwen2.5-1.5B-Instruct-4bit` is the quality upgrade, but expect tighter memory, smaller context, and slower iteration. I would only move to 1.5B after the 0.5B data path, loss curve, and eval prompts look sane.
 
