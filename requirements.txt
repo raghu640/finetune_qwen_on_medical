@@ -1,0 +1,8 @@
+mlx-lm[train]>=0.25.0
+kagglehub>=0.3.12
+kaggle>=1.6.17
+datasets>=3.0.0
+pandas>=2.2.0
+pyarrow>=16.0.0
+tqdm>=4.66.0
+rich>=13.7.0

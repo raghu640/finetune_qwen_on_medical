@@ -1,0 +1,26 @@
+# Conservative defaults for an 8 GB Apple Silicon Mac.
+# Override any value from the CLI if you want to run a longer experiment.
+model: mlx-community/Qwen2.5-0.5B-Instruct-4bit
+train: true
+data: data/processed/mlx
+fine_tune_type: lora
+adapter_path: adapters/qwen25_05b_lavita
+batch_size: 1
+iters: 200
+val_batches: 25
+steps_per_report: 10
+steps_per_eval: 50
+learning_rate: 0.0001
+num_layers: 8
+max_seq_length: 1024
+grad_accumulation_steps: 1
+grad_checkpoint: true
+save_every: 50
+test: false
+test_batches: 50
+lora_parameters:
+  keys: ["self_attn.q_proj", "self_attn.v_proj"]
+  rank: 8
+  scale: 16.0
+  dropout: 0.05
+mask_prompt: true
